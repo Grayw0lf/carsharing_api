@@ -47,6 +47,10 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
 ]
 
+
+AUTH_USER_MODEL = 'users.CarShareUser'
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

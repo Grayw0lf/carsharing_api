@@ -1,3 +1,14 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from .forms import CarShareUserChangeForm, CarShareUserCreationForm
+from .models import CarShareUser
 
-# Register your models here.
+
+class CarShareUserAdmin(UserAdmin):
+    add_form = CarShareUserCreationForm
+    form = CarShareUserChangeForm
+    model = CarShareUser
+    list_display = ['email', 'username']
+
+
+admin.site.register(CarShareUser, CarShareUserAdmin)
