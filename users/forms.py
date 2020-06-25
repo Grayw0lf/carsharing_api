@@ -6,11 +6,11 @@ class CarShareUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CarShareUser
-        fields = ('username', 'email')
+        fields = ('username', 'email', 'user_lang')
 
 
 class CarShareUserChangeForm(UserChangeForm):
 
     class Meta:
         model = CarShareUser
-        fields = ('username', 'email')
+        fields = ('username', 'email', 'user_lang')

@@ -8,7 +8,7 @@ class CarShareUserAdmin(UserAdmin):
     add_form = CarShareUserCreationForm
     form = CarShareUserChangeForm
     model = CarShareUser
-    list_display = ['email', 'username']
+    list_display = ['email', 'username', 'user_lang']
 
 
 admin.site.register(CarShareUser, CarShareUserAdmin)
