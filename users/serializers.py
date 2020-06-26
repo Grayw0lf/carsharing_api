@@ -9,12 +9,12 @@ class RegistrationSerializer(serializers.ModelSerializer):
                                      write_only=True)
     token = serializers.CharField(max_length=255, read_only=True)
 
+    def create(self, validated_data):
+        return CarShareUser.objects.create_user(**validated_data)
+
     class Meta:
         model = CarShareUser
         fields = ('email', 'username', 'password', 'token')
-
-    def create(self, validated_data):
-        return CarShareUser.objects.create_user(**validated_data)
 
 
 class LoginSerializer(serializers.Serializer):
