@@ -14,4 +14,3 @@ urlpatterns = [
 ]
 
 urlpatterns += router.urls
-
