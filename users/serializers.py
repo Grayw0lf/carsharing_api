@@ -44,3 +44,9 @@ class LoginSerializer(serializers.Serializer):
                 'This user has been deactivated.'
             )
         return {'token': user.token,}
+
+
+class CarShareUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CarShareUser
+        fields = ('email', 'username', 'user_lang')
